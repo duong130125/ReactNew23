@@ -1,0 +1,82 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure the modal is on top */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.modal {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+  text-align: center;
+  width: 400px; /* Fixed width for consistency */
+  max-width: 90%; /* Responsive design */
+  animation: slideDown 0.3s ease; /* Smooth slide-down animation */
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #333; /* Darker text for better readability */
+}
+
+.modal p {
+  margin-bottom: 20px;
+  color: #555; /* Slightly lighter text for contrast */
+}
+
+.modal button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:first-of-type {
+  background-color: #6c757d; /* Cancel button color */
+  color: white;
+}
+
+.modal button:first-of-type:hover {
+  background-color: #5a6268; /* Darker on hover */
+}
+
+.modal button:last-of-type {
+  background-color: #dc3545; /* Delete button color */
+  color: white;
+}
+
+.modal button:last-of-type:hover {
+  background-color: #c82333; /* Darker on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
